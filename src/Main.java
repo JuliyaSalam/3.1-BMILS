@@ -1,13 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        //Входные данные
-        int priceTicket = 1500;
-        int numberTicket = 2;
-        int priceBonus = 20;
-        //Логика программы
-        int bonusMiles;
-        bonusMiles = priceTicket * numberTicket / priceBonus;
-        System.out.println("Количество начисленных миль за купленный билет составляет - " + bonusMiles + " миль");
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println("Количество начисленных миль составляет - " + miles + " миль");
 
     }
 }
